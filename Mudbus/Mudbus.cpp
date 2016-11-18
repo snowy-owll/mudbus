@@ -227,8 +227,8 @@ void Mudbus::Run()
 
 void Mudbus::SetFC(int fc)
 {
-  if(fc == 1) FC = MB_FC_READ_COILS;
-  if(fc == 3) FC = MB_FC_READ_REGISTERS;
+  if(fc == 1 || fc == 2) FC = MB_FC_READ_COILS;
+  if(fc == 3 || fc == 4) FC = MB_FC_READ_REGISTERS;
   if(fc == 5) FC = MB_FC_WRITE_COIL;
   if(fc == 6) FC = MB_FC_WRITE_REGISTER;
   if(fc == 15) FC = MB_FC_WRITE_MULTIPLE_COILS;
